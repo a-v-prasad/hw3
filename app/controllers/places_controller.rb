@@ -9,6 +9,7 @@ class PlacesController < ApplicationController
   # GET /places/:id
   def show
     @place = Place.find_by({ "id" => params["id"] })
+    @entries = Entry.all
   end
 
   # GET /places/new
@@ -23,8 +24,5 @@ class PlacesController < ApplicationController
 
     redirect_to "/places"
   end
-
-
-
 
 end
